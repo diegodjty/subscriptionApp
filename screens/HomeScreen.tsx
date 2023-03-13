@@ -7,6 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import ActionRow from "../components/ActionRow";
 const HomeScreen = () => {
   return (
     <SafeAreaView className="flex 1 bg-gray-100 relative">
@@ -21,6 +22,51 @@ const HomeScreen = () => {
           }}
           className="w-full h-64"
         />
+        <View className="mx-5">
+          <View className="flex-row justify-between space-x-2">
+            <ActionRow
+              title="Track Workouts"
+              screen="Demo"
+              color="#E5962D"
+              icon={"fitness"}
+              vertical
+            />
+            <ActionRow
+              title="Browse Workouts"
+              screen="Demo"
+              color="#1982C4"
+              icon={"library"}
+              vertical
+            />
+          </View>
+
+          <ActionRow
+            title="Connect with Friends"
+            screen="Demo"
+            color="#F44174"
+            icon={"share-social"}
+          />
+          <ActionRow
+            title="Add an Exercise"
+            screen="Demo"
+            color="#8AC926"
+            icon={"add-circle"}
+          />
+          <ActionRow
+            title="Create a Routine"
+            screen="Demo"
+            color="#C03221"
+            icon={"md-time"}
+            requiresPro
+          />
+          <ActionRow
+            title="Track Workout"
+            screen="Demo"
+            color="#23967F"
+            icon={"trophy"}
+            requiresPro
+          />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
